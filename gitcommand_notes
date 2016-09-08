@@ -1,0 +1,68 @@
+===================   INDEX	==================
+1. Install
+2. Sync Client and Troubleshoot
+3. Commands
+
+
+
+
+
+===================  MAIN CONTENT  ==================
+
+1. Install :
+  sudo apt-get install git 
+ User Account :
+	username :
+		git config --global user.name "nandeesht1"
+	mail-id :
+		git config --global user.email "nikethan4@gmail.com"
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+2. Sync Client and Troubleshoot
+	HTTP : git clone https://github.com/nandeesht1/LEARNING
+
+	SSH 	: git clone git.github.com:nandeesht1/LEARNING.git
+	syntax  : git clone git.github.com:<USERNAME>/<REPOSITORY>.git
+
+	SSH Key generation :
+		First Error : unknown Hosts -
+			Create the ~/.ssh/config
+				Host *
+   				StrictHostKeyChecking no
+   				UserKnownHostsFile ~/.ssh/known_hosts
+   				LogLevel ERROR
+		Second Error : No publlic access -
+			For this generate the SSH keys and include in the add list, enter it later into the SSH keys of the hithub
+			- Generate keys :
+				ssh-keygen -t rsa -b 4096 -C "nikethan4@gmail.com"
+			- start ssh agent
+				eval "$(ssh-agent -s)"
+			- add the key
+				ssh-add -l
+			- Get the key and paste in the SSH key in the setting of the tab
+				Key - ~/.ssh/id_rsa.pub
+			- check access :
+				ssh -vT git@github.com
+			
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+3. Commands
+
+Add :
+	git add filename
+	git add . -> adds all the files in dir
+
+commit :
+	git commit -m "Messgae of the changes"
+diff :
+	git diff filename
+	git difftool -t tkdiff file_name
+status :
+	git status -> Know the status of the current changed files	
+Modify :
+	just edit the file
+	git add file_name
+push :
+	git push -> Commit the changes to the server
+pull :
+	git pull -> gets the latest files from the server.
