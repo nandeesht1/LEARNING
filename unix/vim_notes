@@ -1,0 +1,61 @@
+################# INDEX ########################
+#1. gvim Installation
+#2. Commands
+#3. Customization
+#4. Colorscheme
+#
+#
+#################################################
+
+################$$$$  MAIN CONTENTS  $$$$########
+
+#1. gvim Installation
+	sudo apt-get install vim-gnome
+
+
+#2. Commands
+
+#3. Customization
+	- cd $HOME
+	- touch ~/.vimrc
+	- Indentation
+    -  Link : http://tedlogan.com/techblog3.html 
+		- set expandtab ## Converts tabs into spaces
+		- set tapstop = 2 ## Tab spaces field to take
+		- set softtabstop = 2 ## Used when the tabstop is diffenret from the tabs to be used in the code.
+ 	  				## Eg : When the standard code to be used
+							
+
+#4. Colorscheme
+	- mkdir ~/.vim
+	- cd ~.vim
+	- git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
+  		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
